@@ -1,31 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useParams } from "react-router-dom"; // prompttan sonra geldi.
+// src/BlogPage.jsx
 
-function App() {
+// ==========================================
+// Konu: React Bileşenlerine Prop ile Veri Gönderme
+// Örnek 2: BlogPost Bileşeni
+// ==========================================
+
+// Verilen Prompt:
+// "BlogPost komponentinde dışarıdan gönderilen bir id proprosunu yakala ve göster."
+
+// AI'ın Ürettiği Çözüm Kodu:
+export default function BlogPage({ id }) {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
-      </Routes>
-    </Router>
+    <div style={{ padding: '20px', background: '#f5f5f5', border: '1px solid #ddd', borderRadius: '8px' }}>
+      <h2>📁 Egzersiz 2: Blog Detay Sayfası</h2>
+      {/* App.jsx'teki şalterden gönderdiğimiz ID buraya basılır */}
+      <p>Gönderilen ID numarası: <strong>{id}</strong></p>
+    </div>
   );
 }
-
-// verilen prompt: "BlogPost komponentinde useParams kullanarak id parametresini yakala ve bir yazı başlığı göster."
-
-
-
-function Home() {
-  return <h1>Ana Sayfa</h1>;
-}
-
-function BlogPost() {
-  // URL'deki :id parametresini yakala
-  const { id } = useParams();
-
-  // Başlık olarak ekrana yazdır
-  return <h1>Blog Yazısı: {id}</h1>;
-}
-
-export default App;

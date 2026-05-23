@@ -1,14 +1,29 @@
 // src/App.jsx
-import TodoList from "./TodoPage"; // Egzersiz sayfamızı buraya çağırdık
+import TodoPage from "./TodoPage";
+import BlogPage from "./BlogPost";
 
-// Projenin Çalışabilmesi İçin Ana Giriş Kapısı (Kök Bileşen):
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>React & AI Prompting Egzersizleri</h1>
-      
-      {/* Ayrı sayfaya taşıdığımız, promptları içeren Todo listesi burada çalışıyor */}
-      <TodoList />
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h1>React & AI Prompting Çalışma Alanı</h1>
+      <hr style={{ margin: '20px 0', borderColor: '#eee' }} />
+
+      {/*
+        ====================================================
+        🔌 ŞALTER ALANI (Egzersiz Seçici)
+
+        Hangi örneği çalıştırmak istiyorsan onu açık bırak.
+        Diğerinin başına // koyarak kapat!
+        ====================================================
+      */}
+
+      {/* Şu an 1. Egzersiz Aktif: */}
+      <TodoPage />
+
+      {/* 2. Egzersizi çalıştırmak istediğinde üsttekini kapatıp alttakini açabilirsin: */}
+      {/* <BlogPage id="42" /> */}
+
+      {/* ==================================================== */}
     </div>
   );
 }
