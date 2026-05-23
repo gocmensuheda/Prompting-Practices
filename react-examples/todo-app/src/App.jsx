@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BlogPost from "./BlogPost";
 // ==========================================
 // Konu: React Projelerinde AI Kullanımı
 // Örnek 1: Bileşen Parçalama ve Prop Aktarımı
@@ -35,3 +36,4 @@ function App() {
 }
 
 export default App;
+
