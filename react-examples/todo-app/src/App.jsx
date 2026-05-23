@@ -12,15 +12,14 @@ function App() {
         ====================================================
         🔌 ŞALTER ALANI (Egzersiz Seçici)
 
-        Hangi örneği çalıştırmak istiyorsan onu açık bırak.
-        Diğerinin başına // koyarak kapat!
-        ====================================================
+
       */}
 
       {/* Şu an 1. Egzersiz Aktif: */}
       <TodoPage />
 
-      {/* 2. Egzersizi çalıştırmak istediğinde üsttekini kapatıp alttakini açabilirsin: */}
+      {/* 2. Egzersizi çalıştırmak istediğinde üsttekini kapatıp alttakini açabilirsin, üsttekini de alttaki gibi yaparak pasif hale getir. alttakini
+           aktif hale getirmek için ise alttaki gibi süslü parantez içinde yorum satırı kullan*/}
       {/* <BlogPage id="42" /> */}
 
       {/* ==================================================== */}
