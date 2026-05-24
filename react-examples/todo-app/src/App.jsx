@@ -7,13 +7,7 @@ function App() {
       <h1>React & AI Prompting Çalışma Alanı</h1>
       <hr style={{ margin: '20px 0', borderColor: '#eee' }} />
 
-      {/*
-        ====================================================
-        🎯 GÜNCEL ÇALIŞMA ALANI
-        Şalter mantığı kaldırıldı. Proje tamamen temizlendi.
-        Şu an sadece 1. Egzersiz (TodoList) çalışıyor.
-        ====================================================
-      */}
+
 
       <TodoPage />
 
