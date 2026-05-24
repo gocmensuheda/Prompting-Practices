@@ -1,6 +1,5 @@
 // src/App.jsx
-import TodoPage from "./TodoPage";
-import BlogPage from "./BlogPost";
+import TodoPage from "./TodoPage"; // Sadece temiz TodoPage dosyamızı çağırıyoruz
 
 function App() {
   return (
@@ -10,19 +9,14 @@ function App() {
 
       {/*
         ====================================================
-        🔌 ŞALTER ALANI (Egzersiz Seçici)
-
-
+        🎯 GÜNCEL ÇALIŞMA ALANI
+        Şalter mantığı kaldırıldı. Proje tamamen temizlendi.
+        Şu an sadece 1. Egzersiz (TodoList) çalışıyor.
+        ====================================================
       */}
 
-      {/* Şu an 1. Egzersiz Aktif: */}
       <TodoPage />
 
-      {/* 2. Egzersizi çalıştırmak istediğinde üsttekini kapatıp alttakini açabilirsin, üsttekini de alttaki gibi yaparak pasif hale getir. alttakini
-           aktif hale getirmek için ise alttaki gibi süslü parantez içinde yorum satırı kullan*/}
-      {/* <BlogPage id="42" /> */}
-
-      {/* ==================================================== */}
     </div>
   );
 }
