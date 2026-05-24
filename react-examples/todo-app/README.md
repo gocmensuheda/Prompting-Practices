@@ -1,18 +1,40 @@
-# React + Vite
+# 🗒️ React & AI Prompting Öğrenme ve Pratik Günlüğü
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu çalışma, bir son kullanıcı projesi değil; React bileşen mimarisi, prop aktarımı, state yönetimi ve dinamik yönlendirme (React Router) konularını pekiştirmek amacıyla oluşturulmuş **bireysel bir öğrenme ve pratik laboratuvarıdır**. 
 
-Currently, two official plugins are available:
+Süreç boyunca karşılaşılan teknik problemler, hata ayıklama (debugging) deneyimleri ve Yapay Zeka (AI) prompt mühendisliği teknikleri bu günlük üzerinde dökümante edilmiştir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> 🔄 **GELİŞİM DURUMU: AKTİF ÖĞRENME DEVAM EDİYOR**
+> Bu laboratuvar, yeni React konuları ve AI prompt egzersizleri ile düzenli olarak güncellenmekte ve genişletilmektedir.
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📦 Kullanılan Harici Bağımlılıklar (Dependencies)
 
-Note: This will impact Vite dev & build performances.
+Egzersizlerin kararlı ve gerçeğe uygun çalışabilmesi için projeye dahil edilen temel kütüphaneler şunlardır:
+* **`react` & `react-dom`**: Çekirdek React kütüphaneleri ve DOM yönetim araçları.
+* **`react-router-dom`**: Egzersiz 2'deki dinamik sayfa yönlendirmelerini, URL yönetimini ve `useParams()` kancasını (hook) kullanabilmek için projeye eklenen yönlendirme motoru.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Uygulanan Öğrenme Egzersizleri
+
+### 💡 Egzersiz 1: Bileşen Parçalama ve Prop Aktarımı (`src/TodoPage.jsx`)
+* **Uygulanan Prompt:** *"TodoItem komponentini oluşturun ve text prop'unu kullanarak her bir todo öğesini liste."*
+* **Kazanılan Refleks:** Monolitik yapıları modüler alt bileşenlere (component) bölme, proplar yardımıyla yukarıdan aşağıya veri akışını sağlama ve `map()` fonksiyonuyle dinamik listeler üretme.
+
+### 📄 Egzersiz 2: React Router ve Dinamik Parametre Yakalama (`src/BlogPage.jsx`)
+* **Uygulanan Prompt:** *"BlogPost komponentinde useParams kullanarak id parametresini yakala ve bir yazı başlığı göster."*
+* **Kazanılan Refleks:** `react-router-dom` kütüphanesini projeye entegre ederek sayfa yenilenmeden yönlendirme yapma. URL üzerindeki dinamik `:id` parametresini `useParams()` kancası (hook) ile yakalama ve bileşen içinde işleme.
+
+---
+
+## 🛠️ Son Aşama: Hata Ayıklama (Debugging) ve Kurulum Notları
+
+Bu pratik sürecinde gerçek dünya senaryolarında sıkça karşılaşılan klasör yolu ve bağımlılık hataları çözümlenmiştir. Çalışmayı yerel bilgisayarınızda ayağa kaldırmak için şu adımları izlemelisiniz:
+
+### 1. Doğru Dizin Yapısına Geçiş (Klasör Çözümlemesi)
+Terminal ilk açıldığında doğrudan ana dizinde bulunmayabilir. Projenin kök dizinine ulaşmak için terminalde şu komutlar sırasıyla çalıştırılmalıdır:
+```bash
+cd react-examples
+cd todo-app
