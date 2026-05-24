@@ -1,6 +1,6 @@
 # 🗒️ React & AI Prompting Öğrenme ve Pratik Günlüğü
 
-Bu çalışma, bir son kullanıcı projesi değil; React bileşen mimarisi, prop aktarımı, state yönetimi ve dinamik yönlendirme (React Router) konularını pekiştirmek amacıyla oluşturulmuş **bireysel bir öğrenme ve pratik laboratuvarıdır**. 
+Bu çalışma, bir son kullanıcı projesi değil; React bileşen mimarisi, prop aktarımı, state yönetimi, dinamik yönlendirme (React Router) ve modern stil yönetimi konularını pekiştirmek amacıyla oluşturulmuş **bireysel bir öğrenme ve pratik laboratuvarıdır**. 
 
 Süreç boyunca karşılaşılan teknik problemler, hata ayıklama (debugging) deneyimleri ve Yapay Zeka (AI) prompt mühendisliği teknikleri bu günlük üzerinde dökümante edilmiştir.
 
@@ -13,7 +13,8 @@ Süreç boyunca karşılaşılan teknik problemler, hata ayıklama (debugging) d
 
 Egzersizlerin kararlı ve gerçeğe uygun çalışabilmesi için projeye dahil edilen temel kütüphaneler şunlardır:
 * **`react` & `react-dom`**: Çekirdek React kütüphaneleri ve DOM yönetim araçları.
-* **`react-router-dom`**: Egzersiz 2'deki dinamik sayfa yönlendirmelerini, URL yönetimini ve `useParams()` kancasını (hook) kullanabilmek için projeye eklenen yönlendirme motoru.
+* **`react-router-dom`**: Dinamik sayfa yönlendirmelerini ve `useParams()` kancasını kullanabilmek için eklenen yönlendirme motoru.
+* **`styled-components`**: CSS kodlarını doğrudan JavaScript bileşenleri içinde yazabilmek (CSS-in-JS) ve dinamik animasyonlar üretebilmek için eklenen stil kütüphanesi.
 
 ---
 
@@ -21,20 +22,23 @@ Egzersizlerin kararlı ve gerçeğe uygun çalışabilmesi için projeye dahil e
 
 ### 💡 Egzersiz 1: Bileşen Parçalama ve Prop Aktarımı (`src/TodoPage.jsx`)
 * **Uygulanan Prompt:** *"TodoItem komponentini oluşturun ve text prop'unu kullanarak her bir todo öğesini liste."*
-* **Kazanılan Refleks:** Monolitik yapıları modüler alt bileşenlere (component) bölme, proplar yardımıyla yukarıdan aşağıya veri akışını sağlama ve `map()` fonksiyonuyle dinamik listeler üretme.
+* **Kazanılan Refleks:** Monolitik yapıları modüler alt bileşenlere bölme, proplar yardımıyla veri akışını sağlama...
 
-### 📄 Egzersiz 2: React Router ve Dinamik Parametre Yakalama (`src/BlogPage.jsx`)
+### 📄 Egzersiz 2: React Router ile Dinamik Parametre Yakalama (`src/BlogPage.jsx`)
 * **Uygulanan Prompt:** *"BlogPost komponentinde useParams kullanarak id parametresini yakala ve bir yazı başlığı göster."*
-* **Kazanılan Refleks:** `react-router-dom` kütüphanesini projeye entegre ederek sayfa yenilenmeden yönlendirme yapma. URL üzerindeki dinamik `:id` parametresini `useParams()` kancası (hook) ile yakalama ve bileşen içinde işleme.
+* **Kazanılan Refleks:** `react-router-dom` entegrasyonu ile sayfa yenilenmeden yönlendirme yapma ve URL üzerindeki dinamik değişkenleri `useParams()` ile yakalama.
+
+### 🎨 Egzersiz 3: Styled-Components ile Stil Yönetimi (`src/ButtonPage.jsx`)
+* **Uygulanan Prompt:** *"Bu CSS'i React'te styled-components ile yeniden yaz."*
+* **Kazanılan Refleks:** Geleneksel CSS dosyalarını modern `styled-components` mimarisine dönüştürme, JavaScript dosyası içinde lokal ve güvenli (scoped) stiller yazma, `&:hover` gibi pseudo-class'ları yönetme ve CSS transition animasyonlarını React bileşenlerine entegre etme.
 
 ---
 
-## 🛠️ Son Aşama: Hata Ayıklama (Debugging) ve Kurulum Notları
+## 🛠️ Kurulum ve Çalıştırma Adımları
 
-Bu pratik sürecinde gerçek dünya senaryolarında sıkça karşılaşılan klasör yolu ve bağımlılık hataları çözümlenmiştir. Çalışmayı yerel bilgisayarınızda ayağa kaldırmak için şu adımları izlemelisiniz:
+Çalışmayı yerel bilgisayarınızda ayağa kaldırmak için şu adımları izlemelisiniz:
 
-### 1. Doğru Dizin Yapısına Geçiş (Klasör Çözümlemesi)
-Terminal ilk açıldığında doğrudan ana dizinde bulunmayabilir. Projenin kök dizinine ulaşmak için terminalde şu komutlar sırasıyla çalıştırılmalıdır:
+### 1. Doğru Dizin Yapısına Geçiş
 ```bash
 cd react-examples
 cd todo-app
