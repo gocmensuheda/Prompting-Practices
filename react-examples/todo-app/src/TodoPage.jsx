@@ -5,25 +5,23 @@
 // Örnek 1: Bileşen Parçalama ve Prop Aktarımı
 // ==========================================
 
-// Başlangıç Kodu
-function TodoList() {
-  const todos = ["React öğren", "AI'yi dene", "Proje tamamla"];
-  return (
-    <ul>
-      {todos.map((todo, index) => (
-        <TodoItem key={index} text={todo} />
-      ))}
-    </ul>
-  );
-}
-
 // Verilen Prompt:
 // "TodoItem komponentini oluşturun ve text prop'unu kullanarak her bir todo öğesini liste."
 
-// AI'ın Ürettiği Çözüm Kodu:
 function TodoItem({ text }) {
   return <li>{text}</li>;
 }
 
-// Bu sayfayı dışarıya TodoList adıyla açıyoruz
-export default TodoList;
+export default function TodoList() {
+  const todos = ["React öğren", "AI'yi dene", "Proje tamamla"];
+  return (
+    <div>
+      <h2>💡 Egzersiz 1: Orijinal Sade Liste</h2>
+      <ul>
+        {todos.map((todo, index) => (
+          <TodoItem key={index} text={todo} />
+        ))}
+      </ul>
+    </div>
+  );
+}
